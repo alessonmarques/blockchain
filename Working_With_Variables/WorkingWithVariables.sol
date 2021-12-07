@@ -32,6 +32,10 @@ contract WorkingWithVariables {
     address public myAddress;
 
     function setAddress(address _myAdress) public {
-        myAdress = _myAdress;
+        myAddress = _myAdress;
+    }
+
+    function getBalanceOfAddress() public view returns(uint) {
+        return myAddress.balance;
     }
 }
