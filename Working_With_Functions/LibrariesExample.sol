@@ -1,10 +1,12 @@
 pragma solidity ^0.5.13;
 
+import "https://github.com/OpenZeppelin/openzeppelin-contracts/contracts/utils/math/SafeMath.sol";
+
 contract LibrariesExample {
   
+  using SafeMath for uint;
+
   mapping(address => uint) public tokenBalance;
-  
-  import "https://github.com/OpenZeppelin/openzeppelin-contracts/contracts/utils/math/SafeMath.sol";
 
   constructor () public {
     tokenBalance[msg.sender] = 1;
